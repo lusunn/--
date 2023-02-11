@@ -1,0 +1,99 @@
+第一章
+Atom、VS code不支持xp,处理器不支持win10：改用Sublime Text 3。
+node.js最新版不支持xp：改用node.js 5.12.0
+Google Chrome最新版不支持xp：改用Fire Fox。
+
+第二章
+browser-sync运行失败：环境变量增加NODE值为C:\Program Files\nodejs\node.exe
+
+第三章
+为img标签设置css属性display为block后，li和img之间出现空白：去掉ul的项目符号或将a或li的display设为block。
+
+第四章
+
+将li设为inline-block并固定宽度后，各li高度不同：
+li的width替换为min-width和max-width后，高度仍然不同：
+
+第五章
+
+缩略图改为竖排后水平方向也有滚动条：li的width属性忘记去掉，去掉即可
+
+初级挑战：
+屏幕方向：https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Media_queries
+横屏：@media all and (orientation: landscape) {}
+
+窗口足够矮时，大图显示不完整：为body设置最低高度。
+
+第六章
+
+浏览器改用chrome 49。
+完成本章后，点击各个缩略图，大图和缩略图宽度不一：改列表的属性为flex:0 0 auto;大图属性为flex:1 1 auto;
+浏览器在某个宽度时，大图会盖住缩略图一部分：小于768时，大图设置最大高度350px
+延伸阅读
+
+
+第七章
+
+增加缩略图之间的间隔：transform:0.8;调整内外边距；
+
+第十章
+
+高级挑战
+
+第十一章
+
+挑战
+
+第十四章
+
+.then(function () {
+  this.removeRow(email);
+}.bind(this));
+第十九章
+安装ember-cli@2.4版本太旧，重新安装ember-cli,
+安装EmberCLI，Ember脚手架：npm install -g ember-cli
+
+npm WARN deprecated exists-sync@0.0.4: Please replace with usage of fs.existsSync
+npm WARN deprecated exists-sync@0.0.3: Please replace with usage of fs.existsSync
+C:\Users\htl\AppData\Roaming\npm\ember -> C:\Users\htl\AppData\Roaming\npm\node_
+modules\ember-cli\bin\ember
+> spawn-sync@1.0.15 postinstall C:\Users\htl\AppData\Roaming\npm\node_modules\ember-cli\node_modules\spawn-sync
+> node postinstall
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules\ember-cli\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
++ ember-cli@3.1.4
+added 717 packages from 404 contributors in 845.023s
+
+创建新项目
+ember new tracker(使用5.6.0版本不要用新版)
+
+app.css改名为app.scss后不起作用。
+解决：app.scss改为app.sass
+修改.gitignore后重新提交tracker,ember s错误，将app.sass重新改为app.scss后成功。
+23
+神秘生物详情页不显示图片，解决：模板路径前加“/”
+
+Ember.Handlebars.SafeString is not a constructor:
+暂未解决，将return new Ember.Handlebars.SafeString('<span class="text-primary">' + formatted + '</span>');
+改为return formatted;暂时不使用SafeString函数
+
+24
+
+this.get(...) is not a function
+templates/sightings/new.hbs中x-option改为xs.option并在#x-select后加 as |xs|
+https://forums.bignerdranch.com/t/install-emberx-select-p-437/10860/4
+
+创建时POST https://bnr-tracker-api.herokuapp.com/api/sightings 400 (Bad Request)
+D:\github\htlbvd\fewd\tracker\app\models\sighting.js打错字
+
+Error: Ember Data Request POST https://bnr-tracker-api.herokuapp.com/api/sightings returned a 500
+Payload (application/vnd.api+json; charset=utf-8)
+x-select版本太新
+
+app/routes/sightings/edit.js没有，有app/routes/sighting/edit.js
+templates/sightings/edit.hbs.....
+controllers/sightings/edit.js......
+
+使用emberx-select@2.2.3时ember s时Cannot read property 'indexOf' of undefined
+使用emberx-select时点击creat时Error: Ember Data Request POST https。。。 returned a 500
+
